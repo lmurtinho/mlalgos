@@ -14,6 +14,11 @@ def linear_regression(X, y, intercept=True):
     regression of y onto X, with or without
     an intercept.
     """
+    
+    # turn into numpy arrays
+    X = np.array(X)
+    y = np.array(y)
+    
     # add intercept column to X
     if intercept:
         X = np.c_[np.ones(X.shape[0]), X]
@@ -27,4 +32,4 @@ def linear_regression(X, y, intercept=True):
     # I*theta = ((Xt*X)**-1)*Xt*y
     X_inv = np.linalg.inv(Xt.dot(X))    
         
-    return X_inv.dot(Xt).dot(y)
+    return np.squeeze(X_inv.dot(Xt).dot(y))
