@@ -1,0 +1,3 @@
+Repository for supervised learning algorithms:
+- Linear regression
+- Others to come...
