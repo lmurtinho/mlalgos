@@ -19,6 +19,12 @@ boston = load_boston()
 X = boston.data
 y = boston.target
 
+# tests to consider:
+# deals with lists (and lists of lists)?
+# deals with data frames?
+# handles incorrect sizes of X and y?
+
+
 def test_boston():
     sk_lr = LinearRegression()
     sk_lr.fit(X, y)
