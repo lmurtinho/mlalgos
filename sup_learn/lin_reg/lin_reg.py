@@ -11,7 +11,8 @@ def linear_regression(X, y, intercept=True):
     on a set of features X to explain a 
     target y.
     Returns the coefficients for a linear
-    regression of y onto X.
+    regression of y onto X, with or without
+    an intercept.
     """
     # add intercept column to X
     if intercept:
